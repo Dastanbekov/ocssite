@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Popup Example</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #modalCheckbox {
+            display: none;
+        }
+        #modalCheckbox:checked + .modal {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="event_reg.html">Event Registration</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="blog_post.html">Blog Post</a></li>
+            <li><a href="table.html">Shedule Table</a></li>
+            <li><a href="progress.html">Progress Bar</a></li>
+            <li><a href="popup.html">Pop Up</a></li>
+        </ul>
+    </nav>
+    <label for="modalCheckbox">
+       Click Me
+    </label>
+
+    <input type="checkbox" id="modalCheckbox">
+    <div class="modal">
+        <div class="modal-content">
+            <label for="modalCheckbox" class="close">&times;</label>
+            <p>Modal Pop Up with only html and css      </p>
+        </div>
+    </div>
+
+</body>
+</html>
